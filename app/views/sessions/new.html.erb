@@ -1,4 +1,8 @@
-<form method='post'>
-  <input name='name'>
-  <input type='submit' value='login'>
-</form> 
+<%= form_tag('/login', method: :post) do %>
+
+<label>Username:</label><br>
+<%= text_field_tag :name %>
+
+<%= submit_tag "Login" %>
+
+<% end %> 

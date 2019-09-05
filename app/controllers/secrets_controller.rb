@@ -6,8 +6,6 @@ class SecretsController < ApplicationController
 		render :show
 	end
 
-	private
-
 	def require_login
     return head(:forbidden) unless session.include? session[:name]
     redirect_to '/login'

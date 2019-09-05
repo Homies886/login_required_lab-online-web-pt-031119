@@ -7,11 +7,4 @@ class ApplicationController < ActionController::Base
   		session[:name]
   end
 
-  private
-
-  def require_login
-    return head(:forbidden) unless session.include? :name
-    redirect_to '/login'
-  end
-
 end
